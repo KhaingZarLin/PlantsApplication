@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/whiteless">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:translationX="@android:dimen/app_icon_size"
+            android:paddingTop="20dp"
+            android:id="@+id/txt_login"
+            android:textColor="@color/green"
+            android:text="@string/login"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_sigin"
+            android:layout_below="@+id/txt_login"
+            android:text="@string/sigin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginLeft="20dp"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_toEndOf="@+id/txt_sigin"
+            android:src="@drawable/leaf4" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_below="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/colordark"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:textSize="15dp"
+            android:text="@string/email"
+            android:id="@+id/txt_email_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:layout_marginRight="-150dp"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:hint="@string/gamilformat"
+            android:layout_below="@+id/txt_email_id"
+            android:background="@drawable/round"
+            android:id="@+id/ed_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:textColor="@color/colordark"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:textSize="15dp"
+            android:text="@string/pass"
+            android:id="@+id/txt_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_email_id"/>
+        <EditText
+            android:layout_marginRight="-150dp"
+            android:inputType="textPassword"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:hint="@string/passwordformat"
+            android:layout_below="@+id/txt_pass"
+            android:background="@drawable/round"
+            android:id="@+id/ed_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_password"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/txt_pass"
+            android:text="@string/forget"
+            android:textColor="@color/green" />
+    </RelativeLayout>
+    <Button
+        android:textSize="20dp"
+        android:textColor="@color/colorwhite"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/rl_login"
+        android:backgroundTint="@color/green"
+        android:background="@drawable/round"
+        android:text="@string/login"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_login"/>
+
+</RelativeLayout>

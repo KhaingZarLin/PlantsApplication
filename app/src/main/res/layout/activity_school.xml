@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".SchoolActivity"
+        android:id="@+id/rootview">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            >
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:minHeight="?attr/actionBarSize"
+                app:contentScrim="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:id="@+id/collap"
+                android:background="@drawable/f2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    ​<androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    >
+                    <ImageView
+                        android:src="@drawable/ic_subject_black_24dp"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"/>
+                </androidx.appcompat.widget.Toolbar>
+                    <TextView
+                        android:translationX="20dp"
+                        android:id="@+id/txt_flower"
+                        android:translationY="50dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorwhite"
+                        android:layout_below="@+id/toolbar"
+                        android:text="@string/flower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txt_school"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="50dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/colorwhite"
+                        android:layout_below="@+id/txt_flower"
+                        android:text="@string/school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:layout_margin="15dp"
+                        android:layout_below="@+id/txt_school"
+                        android:id="@+id/ed_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/search_background"
+                        android:drawableRight="@drawable/ic_search_black_24dp"
+                        android:hint="@string/search"
+                        android:textSize="10dp"
+                        app:actionViewClass="android.widget.SearchView"
+                        app:showAsAction="ifRoom|collapseActionView" />
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            ​
+            ​
+        </com.google.android.material.appbar.AppBarLayout>
+        ​
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            ​
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/constraint_search"
+                android:id="@+id/rc_school"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.core.widget.NestedScrollView>
+        ​
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

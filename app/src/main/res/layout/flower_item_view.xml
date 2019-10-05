@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_img"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"
+        android:layout_margin="8dp"
+       >
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#30CFD8CF">
+        <ImageView
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            android:paddingTop="10dp"
+            android:id="@+id/img_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/txt_plant_name"
+            android:layout_below="@+id/img_fav"
+            android:text="@string/monstera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_account_circle_black_24dp"
+            android:layout_below="@id/txt_plant_name"
+            android:id="@+id/img_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toEndOf="@+id/img_profile"
+            android:text="@string/name"
+            android:layout_below="@+id/txt_plant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_name"/>
+
+        <ImageView
+            android:id="@+id/plant_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="226dp"
+            android:src="@drawable/f9" />
+
+    </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>

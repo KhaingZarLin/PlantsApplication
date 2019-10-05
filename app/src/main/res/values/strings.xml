@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PlantsApplication</string>
+    <string name="login">LOGIN</string>
+    <string name="email">EMAIL ID</string>
+    <string name="pass">PASSWORD</string>
+    <string name="sigin">Sigin in your account to continue</string>
+    <string name="gamilformat">Name@gmail.com</string>
+    <string name="passwordformat">**********</string>
+    <string name="forget">Forget Password?</string>
+    <string name="flower">Flowers</string>
+    <string name="school">School</string>
+    <string name="search">Search</string>
+    <string name="monstera">Monstera</string>
+    <string name="name">by Kata B.</string>
+    <string name="fav">Favorite</string>
+    <string name="recent">Recent</string>
+    <string name="old">Old</string>
+    <string name="color">Color</string>
+    <string name="album">Album</string>
+    <string name="title_activity_school">SchoolActivity</string>
+    <string name="title_activity_plant_detail">PlantDetailActivity</string>
+    <string name="title_activity_basic">BasicActivity</string>
+</resources>
