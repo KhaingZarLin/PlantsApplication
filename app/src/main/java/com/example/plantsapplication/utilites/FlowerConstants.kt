@@ -1,6 +1,6 @@
 package com.example.plantsapplication.utilites
 
-const val BASE_URL ="https://80032420-e94c-49d3-8c8b-570639a026cc.mock.pstmn.io"
+const val BASE_URL ="https://e308d8ad-3558-437c-80d3-ebc9bb4c73db.mock.pstmn.io"
 const val GET_PLANTS = "/getAllPlants"
 const val LOGIN= ""
 

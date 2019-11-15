@@ -49,7 +49,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="226dp"
-            android:src="@drawable/f9" />
+            android:src="@drawable/f9"
+            android:transitionName="tplantImage"/>
 
     </RelativeLayout>
 

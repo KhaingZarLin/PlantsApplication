@@ -7,7 +7,8 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         tools:context=".SchoolActivity"
-        android:id="@+id/rootview">
+        android:id="@+id/rootview"
+        >
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
@@ -64,7 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/search_background"
-                        android:drawableRight="@drawable/ic_search_black_24dp"
+                        android:drawableRight="@drawable/ic_filter_center_focus_black_24dp"
                         android:hint="@string/search"
                         android:textSize="10dp"
                         app:actionViewClass="android.widget.SearchView"

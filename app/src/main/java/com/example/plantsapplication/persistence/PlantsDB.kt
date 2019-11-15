@@ -28,7 +28,7 @@ abstract class PlantsDB: RoomDatabase() {
         }
     }
 
-    fun areDatasExitInDB(): Boolean{
+    /*fun areDatasExitInDB(): Boolean{
         return plantDao().getPlants().isNotEmpty()
-    }
+    }*/
 }

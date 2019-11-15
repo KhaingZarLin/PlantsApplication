@@ -1,5 +1,6 @@
 package com.example.plantsapplication.persistence.daos
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -13,8 +14,8 @@ abstract class PlantDao {
     abstract fun insertPlants(movies: List<PlantVO>): LongArray
 
     @Query("select * from plant_db")
-    abstract fun getPlants(): List<PlantVO>
+    abstract fun getPlants():LiveData<List<PlantVO>>
 
     @Query("SELECT * FROM plant_db WHERE plant_id= :id")
-    abstract fun getPlanstsById(id: String): PlantVO
+    abstract fun getPlanstsById(id: String): LiveData<PlantVO>
 }

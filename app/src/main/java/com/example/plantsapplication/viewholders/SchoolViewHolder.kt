@@ -13,7 +13,7 @@ class SchoolViewHolder(itemView: View, private val itemClicked: FragmentDelegate
                 itemView.setOnClickListener {
                     val id = data?.id
                     if (id != null){
-                        itemClicked.onClicked(id)
+                        itemClicked.onClicked(id,itemView.plant_img)
                     }
 
         }
@@ -23,5 +23,6 @@ class SchoolViewHolder(itemView: View, private val itemClicked: FragmentDelegate
         itemView.txt_plant_name.text = data.plantName
         Glide.with(itemView).load(data.plantPhoto).into(itemView.plant_img)
         Glide.with(itemView).load(data.plantUploadedUserVO.userPhoto).into(itemView.img_profile)
+        itemView.profile_name.text="by "+data.plantUploadedUserVO.name
     }
 }

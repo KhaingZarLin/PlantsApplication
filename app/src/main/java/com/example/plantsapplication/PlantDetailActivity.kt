@@ -3,6 +3,11 @@ package com.example.plantsapplication
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.transition.Slide
+import android.view.Gravity
+import android.view.View
+import android.view.Window
+import android.view.animation.AccelerateDecelerateInterpolator
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,10 +31,13 @@ class PlantDetailActivity : BaseActivity() ,PlantDetailView{
     private lateinit var plantdetailAdapter: PlantDetailAdapter
     private lateinit var plantdetailPresenter:PlantDetailPresenter
 
+    private var isfav = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setUpAnimations()
         setContentView(R.layout.activity_plant_detail)
+        setUpListener()
 
         plantdetailPresenter= PlantDetailPresenter()
         plantdetailPresenter.initPresenter(this)
@@ -38,14 +46,45 @@ class PlantDetailActivity : BaseActivity() ,PlantDetailView{
         val plantId=intent.getStringExtra(PlantDetailActivity.EXTRA_PLANT_ID)
         plantdetailPresenter.onUIReady(plantId)
 
-        with(plant_detail_rc)
-        {
-            setHasFixedSize(true)
-            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@PlantDetailActivity)
-            plant_detail_rc.adapter = plantdetailAdapter
+//        with(plant_detail_rc)
+//        {
+//            setHasFixedSize(true)
+//            layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@PlantDetailActivity)
+//            plant_detail_rc.adapter = plantdetailAdapter
+//        }
+      //  plantdetailPresenter.onCreate()
+        back_iv.setOnClickListener {
+            finish()
         }
-        plantdetailPresenter.onCreate()
 
+        plantdetailPresenter.onUIReady(plantId)
+
+    }
+    private fun setUpAnimations(){
+        with(window){
+            requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
+            val slide = Slide()
+            slide.slideEdge = Gravity.RIGHT
+            slide.interpolator = AccelerateDecelerateInterpolator()
+            slide.duration = 100
+
+            enterTransition = slide
+            exitTransition = slide
+        }
+    }
+    private fun setUpListener()
+    {
+       btn_fav.setOnClickListener {
+           if (!isfav) {
+               btn_fav.speed = 1.0f
+               btn_fav.playAnimation()
+               isfav = true
+           } else {
+               btn_fav.speed = -4.0f
+               btn_fav.playAnimation()
+               isfav = false
+           }
+       }
     }
     private fun bindData(plantVO:PlantVO)
     {
@@ -54,6 +93,11 @@ class PlantDetailActivity : BaseActivity() ,PlantDetailView{
             .into(ivTagImage)
         Glide.with(vpEventDetailImages).load(plantVO.plantPhoto)
             .into(vpEventDetailImages)
+        tvDescription.text=plantVO.description
+        textView.text=plantVO.plantTipsVO.temperature
+        textView1.text=plantVO.plantTipsVO.light
+        textView2.text=plantVO.plantTipsVO.placement
+        tvname.text="by "+plantVO.plantUploadedUserVO.name
 
     }
 

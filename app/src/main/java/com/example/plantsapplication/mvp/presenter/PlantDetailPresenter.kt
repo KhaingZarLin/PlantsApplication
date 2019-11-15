@@ -8,9 +8,14 @@ class PlantDetailPresenter:BasePresenter<PlantDetailView>() {
     {
         if (plant_id!=null)
         {
-            val model=PlantModelImpl
+       /*     val model=PlantModelImpl
             val plantVO=model.getPlantsById(plant_id)
-           mView.displayPlantData(plantVO)
+           mView.displayPlantData(plantVO)*/
+
+            val model:PlantModelImpl=PlantModelImpl
+            model.getPlantsById(plant_id)
+                .observeForever {  mView.displayPlantData(it) }
+
         }
     }
 

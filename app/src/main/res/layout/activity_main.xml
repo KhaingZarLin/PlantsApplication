@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"/>
 
         <ImageView
+            android:id="@+id/profile_img"
             android:layout_marginLeft="20dp"
             android:layout_width="200dp"
             android:layout_height="120dp"
@@ -85,6 +86,7 @@
             android:layout_height="50dp"/>
 
         <TextView
+            android:id="@+id/forget_pass"
             android:paddingTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
