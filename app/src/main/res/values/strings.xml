@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PlantsApplication</string>
     <string name="login">LOGIN</string>
-    <string name="email">EMAIL ID</string>
+    <string name="usrename">USERNAME</string>
     <string name="pass">PASSWORD</string>
     <string name="sigin">Sigin in your account to continue</string>
     <string name="gamilformat">Name@gmail.com</string>
@@ -20,4 +20,7 @@
     <string name="title_activity_school">SchoolActivity</string>
     <string name="title_activity_plant_detail">PlantDetailActivity</string>
     <string name="title_activity_basic">BasicActivity</string>
+    <string name="fb">FACEBOOK</string>
+    <string name="google">GOOGLE</string>
+    <string name="connect">OR CONNECT WITH</string>
 </resources>

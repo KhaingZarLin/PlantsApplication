@@ -1,27 +1,20 @@
-package com.example.plantsapplication
+package com.example.plantsapplication.activities
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.transition.Slide
 import android.view.Gravity
-import android.view.View
 import android.view.Window
 import android.view.animation.AccelerateDecelerateInterpolator
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.plantsapplication.R
 import com.example.plantsapplication.adapter.PlantDetailAdapter
 import com.example.plantsapplication.data.vos.PlantVO
-import com.example.plantsapplication.delegate.FragmentDelegateOne
 import com.example.plantsapplication.mvp.presenter.PlantDetailPresenter
 import com.example.plantsapplication.mvp.views.PlantDetailView
 
 import kotlinx.android.synthetic.main.activity_plant_detail.*
-import kotlinx.android.synthetic.main.activity_school.*
-import kotlinx.android.synthetic.main.flower_item_view.view.*
 
 class PlantDetailActivity : BaseActivity() ,PlantDetailView{
     override fun displayPlantData(data: PlantVO) {
@@ -43,7 +36,7 @@ class PlantDetailActivity : BaseActivity() ,PlantDetailView{
         plantdetailPresenter.initPresenter(this)
         plantdetailAdapter= PlantDetailAdapter()
 
-        val plantId=intent.getStringExtra(PlantDetailActivity.EXTRA_PLANT_ID)
+        val plantId=intent.getStringExtra(EXTRA_PLANT_ID)
         plantdetailPresenter.onUIReady(plantId)
 
 //        with(plant_detail_rc)
@@ -106,7 +99,7 @@ class PlantDetailActivity : BaseActivity() ,PlantDetailView{
 
         fun newIntent(context: Context, plantId:String): Intent {
 
-            return Intent(context,PlantDetailActivity::class.java).apply {
+            return Intent(context, PlantDetailActivity::class.java).apply {
                 putExtra(EXTRA_PLANT_ID,plantId)
             }
 

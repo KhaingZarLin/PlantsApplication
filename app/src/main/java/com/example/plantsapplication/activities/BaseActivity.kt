@@ -1,4 +1,4 @@
-package com.example.plantsapplication
+package com.example.plantsapplication.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

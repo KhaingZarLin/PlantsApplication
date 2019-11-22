@@ -10,16 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FavoriteActivity"></activity>
+        <activity android:name=".activities.FavoriteActivity"></activity>
 
         <activity
-            android:name=".PlantDetailActivity"
+            android:name=".activities.PlantDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".SchoolActivity"
+            android:name=".activities.SchoolActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

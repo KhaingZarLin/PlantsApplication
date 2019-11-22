@@ -10,4 +10,6 @@
     <color name="lightwhite">#CFD8CF</color>
     <color name="gray">#D7DFD7</color>
     <color name="whiteless">#EEEBEB</color>
+    <color name="blue">#1571BB</color>
+    <color name="red">#E02563</color>
 </resources>

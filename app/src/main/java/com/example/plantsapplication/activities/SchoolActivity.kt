@@ -1,12 +1,9 @@
-package com.example.plantsapplication
+package com.example.plantsapplication.activities
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.transition.Slide
-import android.view.Gravity
 import android.view.KeyEvent
 import android.view.View
 import android.view.Window
@@ -15,17 +12,11 @@ import android.view.inputmethod.EditorInfo
 import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityOptionsCompat
 import androidx.core.util.Pair
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.transition.Fade
+import com.example.plantsapplication.R
 import com.example.plantsapplication.adapter.SchoolAdapter
-import com.example.plantsapplication.data.model.PlantModelImpl
 import com.example.plantsapplication.data.vos.PlantVO
-import com.example.plantsapplication.delegate.FragmentDelegateOne
-import com.example.plantsapplication.mvp.presenter.PlantlistPresenter
 import com.example.plantsapplication.mvp.presenter.SchoolPresenter
 import com.example.plantsapplication.mvp.views.SchoolView
 
@@ -34,7 +25,7 @@ import kotlinx.android.synthetic.main.activity_school.*
 class SchoolActivity : BaseActivity(), SchoolView{
 
     companion object {
-        fun newIntent(context: Context): Intent {
+        fun newIntent(context: MainActivity): Intent {
             return Intent(context, SchoolActivity::class.java)
         }
     }
@@ -46,7 +37,11 @@ class SchoolActivity : BaseActivity(), SchoolView{
     override fun navigateToDetail(id: String,plantImgView:ImageView) {
        val pair= Pair.create(plantImgView as View,"tplantImage")
        val options= ActivityOptionsCompat.makeSceneTransitionAnimation(this,pair)
-        startActivity(PlantDetailActivity.newIntent(applicationContext, id),options.toBundle())
+        startActivity(
+            PlantDetailActivity.newIntent(
+                applicationContext,
+                id
+            ),options.toBundle())
     }
 
 

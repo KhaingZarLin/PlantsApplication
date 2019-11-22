@@ -17,3 +17,5 @@ const val EM_EVENT_MODEL_NOT_INITIALIZED= "Event Model should have been initiali
 const val DB_NAME= "plant_db"
 
 const val CODE_RESPONSE_OK= 200
+
+const val RC_SIGN_IN = 1

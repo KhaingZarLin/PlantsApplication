@@ -5,38 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     android:background="@color/whiteless">
 
     <RelativeLayout
         android:id="@+id/rl_head"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <TextView
-            android:translationX="@android:dimen/app_icon_size"
-            android:paddingTop="20dp"
-            android:id="@+id/txt_login"
-            android:textColor="@color/green"
-            android:text="@string/login"
-            android:textSize="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/txt_sigin"
-            android:layout_below="@+id/txt_login"
-            android:text="@string/sigin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
         <ImageView
+            android:layout_marginTop="50dp"
+            android:layout_centerInParent="true"
             android:id="@+id/profile_img"
-            android:layout_marginLeft="20dp"
             android:layout_width="200dp"
             android:layout_height="120dp"
-            android:layout_toEndOf="@+id/txt_sigin"
             android:src="@drawable/leaf4" />
 
     </RelativeLayout>
@@ -48,39 +31,37 @@
         android:layout_height="wrap_content">
         <TextView
             android:textColor="@color/colordark"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="30dp"
             android:textSize="15dp"
-            android:text="@string/email"
+            android:text="@string/usrename"
             android:id="@+id/txt_email_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <EditText
-            android:layout_marginRight="-150dp"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:hint="@string/gamilformat"
             android:layout_below="@+id/txt_email_id"
-            android:background="@drawable/round"
-            android:id="@+id/ed_email_id"
+            android:id="@+id/ed_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
 
         <TextView
             android:textColor="@color/colordark"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="30dp"
             android:textSize="15dp"
             android:text="@string/pass"
             android:id="@+id/txt_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ed_email_id"/>
+            android:layout_below="@+id/ed_username"/>
         <EditText
-            android:layout_marginRight="-150dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:inputType="textPassword"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
             android:hint="@string/passwordformat"
             android:layout_below="@+id/txt_pass"
-            android:background="@drawable/round"
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
@@ -97,17 +78,86 @@
             android:text="@string/forget"
             android:textColor="@color/green" />
     </RelativeLayout>
+
     <Button
-        android:textSize="20dp"
-        android:textColor="@color/colorwhite"
-        android:layout_marginLeft="-100dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/rl_login"
-        android:backgroundTint="@color/green"
-        android:background="@drawable/round"
-        android:text="@string/login"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:id="@+id/btn_login"
         android:layout_width="400dp"
         android:layout_height="60dp"
-        android:id="@+id/btn_login"/>
+        android:layout_below="@+id/rl_login"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/green"
+        android:text="@string/login"
+        android:textColor="@color/colorwhite"
+        />
+
+    <TextView
+        android:id="@+id/txt_continue"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/btn_login"
+        android:text="---------------- OR CONNECT WITH ----------------"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_below="@+id/txt_continue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/btn_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/round"
+            android:gravity="center">
+            <ImageView
+                android:src="@drawable/facebook_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:text="FACEBOOK"
+                android:textColor="@color/whiteless"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/google"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/google_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOOGLE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/whiteless"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>

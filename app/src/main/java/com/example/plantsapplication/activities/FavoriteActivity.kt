@@ -1,7 +1,8 @@
-package com.example.plantsapplication
+package com.example.plantsapplication.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.plantsapplication.R
 
 class FavoriteActivity : AppCompatActivity() {
 

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "961414730855",
+    "firebase_url": "https://firebse-assigment.firebaseio.com",
+    "project_id": "firebse-assigment",
+    "storage_bucket": "firebse-assigment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961414730855:android:a21cf028955aa6881e30c2",
+        "android_client_info": {
+          "package_name": "com.example.plantsapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961414730855-vv1114td7vhapntvuroghi24qbqbsi84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plantsapplication",
+            "certificate_hash": "71c317bf44738da1b903baac103c8f7c3c0b13f0"
+          }
+        },
+        {
+          "client_id": "961414730855-4ppteq70fe58ui4vauadprnnvb7io657.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4qJ_HykH80amcqXAQr6AGkse5MIFBZPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961414730855-4ppteq70fe58ui4vauadprnnvb7io657.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
